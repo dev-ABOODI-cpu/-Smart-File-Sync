@@ -1,13 +1,19 @@
 import os
-import shutil                                                           import sys
+import shutil
+import sys
 import time
 import requests
 from colorama import Fore, Style, init
 import arabic_reshaper
 from bidi.algorithm import get_display
 
-# تفعيل مكتبة الألوان                                                   init(autoreset=True)
-                                                                        # ألوان متناسقة وفخمة جداً للأدوات الاحترافية                            MAGENTA = Fore.LIGHTMAGENTA_EX   # بنفسجي مضيء للإطارات والزخارف        CYAN = Fore.LIGHTCYAN_EX         # سماوي للنصوص الأساسية وحقوقك         GREEN = Fore.LIGHTGREEN_EX       # أخضر مبهج للخيارات والنجاح
+# تفعيل مكتبة الألوان
+init(autoreset=True)
+
+# ألوان متناسقة وفخمة جداً للأدوات الاحترافية
+MAGENTA = Fore.LIGHTMAGENTA_EX   # بنفسجي مضيء للإطارات والزخارف
+CYAN = Fore.LIGHTCYAN_EX         # سماوي للنصوص الأساسية وحقوقك
+GREEN = Fore.LIGHTGREEN_EX       # أخضر مبهج للخيارات والنجاح
 YELLOW = Fore.LIGHTYELLOW_EX     # أصفر للتنبيهات
 RED = Fore.LIGHTRED_EX           # أحمر للخروج
 GRAY = Fore.WHITE                # رمادي فاتح للمدخلات
@@ -30,7 +36,7 @@ def print_banner():
     print(f"{MAGENTA}│ {CYAN}  » WhatsApp  : +249112727808                    {MAGENTA}│")
     print(f"{MAGENTA}│ {CYAN}  » Telegram  : @da_62                           {MAGENTA}│")
     print(f"{MAGENTA}├──────────────────────────────────────────────────┤")
-    print(f"{MAGENTA}│        {GREEN}✨ {fix_arabic('مرحباً بك في غرفتك البرمجية الخاصة')} ✨      {MAGENTA}│")
+    print(f"{MAGENTA}│        {GREEN}✨ {fix_arabic('مرحباً بك في غرفتك البرمجية الخاصة')} ✨     {MAGENTA}│")
     print(f"{MAGENTA}└──────────────────────────────────────────────────┘")
 
 def download_file(url):
